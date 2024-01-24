@@ -15,7 +15,8 @@ export default class RouterHandler {
             { path: '/', page: Stories },
             { path: '/new', page: Stories },
             { path: '/ask', page: Stories },
-            { path: '/show', page: Stories }
+            { path: '/show', page: Stories },
+            { path: '/jobs', page: Stories }
         ];
 
         routes.forEach(route => {
