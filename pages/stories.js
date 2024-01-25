@@ -38,7 +38,7 @@ async function getStories(path) {
         try {
             const response = await fetch(`${apiRoute}${path}`);
             if (!response.ok) {
-                throw new console.error(response.status);
+                throw new Error(response.status);
             }
             const stories = await response.json()
             return stories
