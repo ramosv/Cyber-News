@@ -1,10 +1,12 @@
 export default function Story(story) {
-    console.log(story);
+    //console.log(story);
     return `
     <div class="story">
         <div>
             <span class="grey">${story.index || ""}</span>
-            <span class="upvote">▲</span>
+            <span class="upvote">
+                <img src="images/like.png">
+            </span>
             <a href="${story.url}">${story.title}</a>
             <span>(${story.domain})</span>
         </div>
@@ -23,5 +25,6 @@ export default function Story(story) {
             </div>
         </div>
     </div>
+    <hr>
     `;
 }

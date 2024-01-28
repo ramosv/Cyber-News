@@ -1,18 +1,19 @@
 import view from "../utils/view.js";
 import Story from "../components/Story.js"
+import Comments from "../components/Comments.js"
 
 export default async function Item(path) {
 
     const story = await getStory();
     const hasComments = story.comments.length > 0;
 
-    console.log(story.comments);
+    //console.log(story.comments);
     return view.innerHTML = `
     <div>
         ${Story(story)}
     </div>
     <hr/>
-    ${hasComments ? story.comments.map(comment => JSON.stringify(comment)).join("") : "No Commnets"}
+    ${hasComments ? story.comments.map(comment => Comments(comment)).join("") : "No Commnets"}
     `;
 
 

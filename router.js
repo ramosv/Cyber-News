@@ -4,7 +4,7 @@ import Stories from './pages/stories.js';
 import Item from './pages/item.js';
 
 const router = new Navigo(null, true, '#');
-console.log(router);
+//console.log(router);
 
 export default class RouterHandler {
     constructor() {
